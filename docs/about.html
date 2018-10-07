@@ -1,0 +1,260 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+    <title>About this App</title>
+</head>
+
+<style>
+    a {
+        color: rgb(117, 104, 175)
+    }
+
+    body {
+        font-family: 'Raleway', 'sans-serif';
+    }
+
+    h3 {
+        color: rgb(145, 143, 143)
+    }
+
+
+    .column {
+        display: inline-block;
+        width: 50%;
+        padding: 10px
+    }
+
+    .column {
+        flex: 50%;
+        padding: 10px;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .button1 {
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        color: black;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1:hover {
+        background-color: rgb(73, 52, 168);
+        color: white;
+    }
+
+    .button2 {
+        background-color: transparent;
+        border: none
+    }
+
+    .button2:hover {
+        background-color: transparent;
+        border: none
+    }
+
+    .slideout-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+        width: 256px;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        display: none;
+    }
+
+
+    .slideout-panel {
+        position: relative;
+        z-index: 1;
+        will-change: transform;
+        background-image: linear-gradient(#0F2027, #203A43, #2C5364);
+        padding-bottom: 20px
+    }
+
+    .slideout-open,
+    .slideout-open body,
+    .slideout-open .slideout-panel {
+        overflow: hidden;
+    }
+
+    .slideout-open .slideout-menu {
+        display: block;
+    }
+
+    div.scrollmenu {
+        background-color: black;
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+    div.scrollmenu img {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        text-decoration: none;
+    }
+
+    div.scrollmenu img:hover {
+        background-color: rgb(73, 52, 168)
+    }
+
+    .zoom {
+        padding: 50px;
+        transition: transform .2s;
+        /* Animation */
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .zoom:hover {
+        transform: scale(1.5);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+</style>
+
+
+
+<body style="background-image: linear-gradient(#0F2027, #203A43, #2C5364); background-repeat: no-repeat">
+
+
+    <nav id="menu" style="padding-top:10px" class="list-group">
+        <a href="index.html" class="list-group-item" style="background-color: darkslategray">Home</a>
+        <a href="about.html" class="list-group-item" style="background-color: darkslategray">About</a>
+        <a href="developers.html" class="list-group-item" style="background-color: darkslategray">Developers</a>
+    </nav>
+
+    <main id="panel">
+        <header>
+            <button class="toggle-button button button1">☰</button>
+        </header>
+
+        <h1 style="text-align:center; color: gray; font-family:'Raleway', sans-serif; font-size: 52px; margin-bottom: 40px">
+            About this App
+        </h1>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+
+        <div id="typed-strings" class="special1">
+            <p>Dining@PSU takes a user-friendly approach to each meal you eat.</p>
+            <p>Find the information you desire, and carry on with your day</p>
+            <p><em><strong>seamlessly...</strong></em></p>
+        </div>
+        <div style="text-align: center; color: gainsboro">
+            <span id="typed"></span>
+        </div>
+        <script>
+            $(document).ready(function () {
+                var typed = new Typed('#typed', {
+                    stringsElement: '#typed-strings',
+                    backSpeed: 10,
+                    typeSpeed: 40,
+                    backDelay: 1000,
+                    smartBackspace: true,
+                    loop: true
+                });
+            })
+        </script>
+
+        <div class="container">
+
+            <!-- Button trigger modal -->
+            <div class="scrollmenu" style="text-align:center; margin-top:30px; margin-bottom:20px; margin-left: 200px; margin-right: 200px">
+                <img src="Device3.png" width="400px">
+                <img src="Device2.png" width="400px">
+                <img src="Device1.png" width="400px">
+
+            </div>
+            <div style="text-align:center; color:white">
+                Image Desc
+            </div>
+
+            <p style="text-align:center; padding-top:20px" class="imgAppear"><img src="hackpsu.png" width="300px"></p>
+            <script>
+                ScrollReveal().reveal('.imgAppear', { delay: 700 })
+            </script>
+
+            <div class="mx-auto" style="text-align:center; color:white; width: 700px">
+                This project was created during the 24 hour HackPSU Coding Competition.
+                Due to the recent ending of support for the native iOS application dedicated to
+                providing students with dining and nutritional information, our team created this app
+                in order to bring back the ability for students to quickly access any of the dining information
+                they desire from the convenience of their smartphones.
+            </div>
+            <div>
+
+            </div>
+
+
+            <div class=" Container">
+                <div class="Header">
+
+                </div>
+
+
+
+                <div class="Body">
+
+                </div>
+            </div>
+
+    </main>
+
+    <script src="dist/slideout.min.js"></script>
+    <script>
+        var slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu'),
+            'padding': 256,
+            'tolerance': 70
+        });
+
+        // Toggle button
+        document.querySelector('.toggle-button').addEventListener('click', function () {
+            slideout.toggle();
+        });
+    </script>
+
+
+</body>
+
+</html>

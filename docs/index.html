@@ -1,0 +1,182 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+    <meta http-equiv="cleartype" content="on">
+    <meta name="MobileOptimized" content="320">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+
+    <title>Dining@PSU</title>
+</head>
+
+<style>
+    a {
+        color: rgb(117, 104, 175)
+    }
+
+
+    body {
+        font-family: 'Raleway', 'sans-serif';
+    }
+
+    h3 {
+        color: rgb(145, 143, 143)
+    }
+
+
+    .column {
+        display: inline-block;
+        width: 50%;
+        padding: 10px
+    }
+
+    .column {
+        flex: 50%;
+        padding: 10px;
+    }
+
+    .row {
+        display: flex;
+    }
+
+    .button1 {
+        margin-top: 20px;
+        margin-left: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        color: black;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1:hover {
+        background-color: rgb(73, 52, 168);
+        color: white;
+    }
+
+    .slideout-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+        width: 256px;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        display: none;
+    }
+
+
+    .slideout-panel {
+        position: relative;
+        z-index: 1;
+        will-change: transform;
+        background-image: linear-gradient(#0F2027, #203A43, #2C5364);
+        padding-bottom: 20px
+    }
+
+    .slideout-open,
+    .slideout-open body,
+    .slideout-open .slideout-panel {
+        overflow: hidden;
+    }
+
+    .slideout-open .slideout-menu {
+        display: block;
+    }
+</style>
+
+
+
+<body style="background-image: linear-gradient(#0F2027, #203A43, #2C5364); background-repeat: no-repeat">
+
+
+    <nav id="menu" style="padding-top:10px" class="list-group">
+        <a href="index.html" class="list-group-item" style="background-color: darkslategray">Home</a>
+        <a href="about.html" class="list-group-item" style="background-color: darkslategray">About</a>
+        <a href="developers.html" class="list-group-item" style="background-color: darkslategray">Developers</a>
+    </nav>
+
+    <main id="panel">
+        <header>
+            <button class="toggle-button button button1">☰</button>
+        </header>
+
+        <h1 style="text-align:center; color: gray; font-family:'Raleway', sans-serif; font-size: 52px">
+            Dining@PSU
+        </h1>
+
+        <p style="text-align:center; animation-duration: 1.5s" class="w3-container w3-center w3-animate-right"><img src="RoundedIcon.png"
+                width="256" height="256"></p>
+
+        <h3 style="text-align:center; padding-bottom: 20px">
+            The easy-to-use dining app made <b>for</b> students <b>by</b> students
+        </h3>
+
+        <div class="row">
+            <div class="mx-auto">
+                <a href="#"><img src="appstore.png" style="width:300px"></a>
+            </div>
+            <div class="mx-auto">
+                <a href="#"><img src="googleplay.png" style="width:340px; margin-top: -20px"></a>
+            </div>
+        </div>
+
+
+        <div class=" Container">
+            <div class="Header">
+
+            </div>
+
+
+
+            <div class="Body">
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="dist/slideout.min.js"></script>
+    <script>
+        var slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu'),
+            'padding': 256,
+            'tolerance': 70
+        });
+
+        // Toggle button
+        document.querySelector('.toggle-button').addEventListener('click', function () {
+            slideout.toggle();
+        });
+    </script>
+
+
+</body>
+
+</html>
